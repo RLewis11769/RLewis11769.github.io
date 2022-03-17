@@ -1,0 +1,39 @@
+:root {
+  --bg-primary: #0D1117;
+  --color-primary: #161B22;
+  --color-secondary: #26A641;
+  --text-primary: #8B949E;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Verdana", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  background-color: var(--bg-primary);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}

@@ -1,0 +1,17 @@
+.NavBar {
+  background-color: var(--color-primary);
+  padding: 5rem 0;
+  width: 100%;
+}
+
+ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+.NavBar a {
+  padding: 2rem;
+  font-size: 5rem;
+  text-transform: uppercase;
+  color: var(--color-secondary);
+}
