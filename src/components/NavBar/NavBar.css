@@ -1,4 +1,4 @@
-.NavBar {
+/* .NavBar {
   background-color: var(--color-primary);
   padding: 5rem 0;
   width: 100%;
@@ -11,7 +11,18 @@ ul {
 
 .NavBar a {
   padding: 2rem;
-  font-size: 5rem;
+  font-size: 7.5rem;
   text-transform: uppercase;
+  text-decoration: none;
   color: var(--color-secondary);
+} */
+
+.NavBar {
+  position: absolute;
+  z-index: 1;
+}
+
+span {
+  font-size: 1.5rem;
+  font-weight: bold;
 }

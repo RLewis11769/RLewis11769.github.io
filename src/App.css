@@ -17,23 +17,35 @@ html {
 }
 
 body {
+  background-color: var(--bg-primary);
   font-family: "Verdana", sans-serif;
   margin: 0;
   padding: 0;
 }
 
 main {
-  background-color: var(--bg-primary);
   display: flex;
   flex-direction: column;
   width: 100%;
 }
 
 a {
-  color: var(--color-primary);
-  text-decoration: none;
+  color: var(--text-primary);
+}
+
+a:hover, a:focus {
+  color: var(--color-secondary);
 }
 
 ul {
   list-style: none;
+}
+
+p {
+  color: var(--text-primary);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
 }

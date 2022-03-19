@@ -1,18 +1,49 @@
 #homepage {
-  margin: 0 auto;
   position: relative;
+  height: 100vh;
 }
 
-#homepage img {
-  max-height: 70rem;
-  max-width: 100%;
+#homepage > img {
+  height: 100%;
+  width: 100%;
   object-fit: cover;
+  object-position: 30%;
 }
 
 .name {
   color: var(--color-secondary);
+  /* text-shadow: rgb(255 255 255 / 80%) 0px 0px 10px; */
   text-transform: uppercase;
+  text-align: center;
   position: absolute;
-  top: 35%;
-  right: 15%;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0 3rem;
+}
+/*
+@media screen and (min-width: 768px) {
+  #homepage {
+    height: 100vh;
+    margin: 0 auto;
+  }
+
+  .name {
+    left: 80%;
+    top: 50%;
+    text-align: left;
+  }
+} */
+
+@media screen and (min-width: 900px) {
+  #homepage {
+    height: 100vh;
+    margin: 0 auto;
+  }
+
+  .name {
+    left: 80%;
+    top: 50%;
+    text-align: left;
+  }
 }
