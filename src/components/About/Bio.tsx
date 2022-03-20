@@ -1,8 +1,10 @@
+import ProfilePic from '../../assets/personal/ProfilePic.png';
+
 export default function Bio() {
   return (
     <div className="bio_div container">
       <div>
-        <img src={require('../../assets/personal/ProfilePic.png')} alt="Profile pic" />
+        <img src={ProfilePic} alt="Profile pic" />
       </div>
       <div>
         <p>Einstein is clearly way better at implementation than I am. But I&apos;m 100% behind him on this: All great ideas start with great data and a plan.</p>

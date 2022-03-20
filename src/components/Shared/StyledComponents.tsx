@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { IconButton } from '@material-ui/core';
 
-const MenuButton = styled('button')<{ clicked: boolean }>`
+const MenuButton = styled('button')<{ clicked: boolean, alt: string }>`
   background-color: var(--color-primary);
   border: none;
   height: 3.5rem;
@@ -59,7 +59,7 @@ const MenuItems = styled('ul')<{ clicked: boolean }>`
   border-radius: 0 3rem 3rem 0;
 `;
 
-const MenuItem = styled.a`
+const MenuItem = styled('a')<{ exact?: boolean, activeClassName: string, href: string, alt: string }>`
   text-decoration: none;
   color: var(--text-secondary);
   width: 100%;
@@ -115,6 +115,7 @@ const Text = styled('p')({
 
 const ButtonLink = styled('a')({
   textDecoration: 'none',
+  padding: '1rem',
   color: 'var(--text-primary)',
   '&:hover': {
     color: 'var(--text-secondary)',

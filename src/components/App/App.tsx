@@ -1,10 +1,11 @@
 import './App.css';
-import About from './components/About/About';
-import HomePage from './components/HomePage/HomePage';
-import Projects from './components/Projects/Projects';
-import NavBar from './components/NavBar/NavBar';
-import Footer from './components/Footer/Footer';
-import Resume from './components/Resume/Resume';
+import About from '../About/About';
+import Contact from '../Contact/Contact';
+import Footer from '../Footer/Footer';
+import HomePage from '../HomePage/HomePage';
+import NavBar from '../NavBar/NavBar';
+import Projects from '../Projects/Projects';
+import Resume from '../Resume/Resume';
 
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
           <About />
           <Projects />
           <Resume />
+          <Contact />
         </div>
       </main>
       <Footer />

@@ -2,13 +2,13 @@ const path = require('path');
 
 module.exports = {
   mode: 'development',
-  entry: './src/index.js',
+  entry: path.resolve(__dirname, './src/index.tsx'),
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, './dist'),
     filename: 'bundle.js',
   },
   devServer: {
-    static: path.resolve(__dirname, 'dist'),
+    static: path.resolve(__dirname, './dist'),
     hot: true,
     compress: true,
   },
@@ -20,7 +20,7 @@ module.exports = {
         use: ['style-loader', 'css-loader'],
       },
       {
-        test: /\.(jpe?g|png|gif|svg)$/i,
+        test: /\.(jpe?g|png|gif|svg|pdf)$/i,
         use: [
           'file-loader',
           {
@@ -44,4 +44,7 @@ module.exports = {
       },
     ],
   },
+  // resolve: {
+  //   extensions: ['.ts', '.tsx', '.js', '.jsx'],
+  // },
 };

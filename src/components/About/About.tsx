@@ -7,7 +7,7 @@ export default function About() {
   const classes = useStyles();
 
   return (
-    <section>
+    <section id="about">
       <Typography variant="h1" className={classes.title}>About</Typography>
       <div className="quote_div">
         <blockquote>

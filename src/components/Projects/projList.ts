@@ -59,7 +59,7 @@ const projList = [
     'tools': ['Bootstrap', 'jQuery', 'jQuery Validation (for forms)', 'Slick (for carousel)', 'Spotify API'],
     'experience': '3 months of frontend development',
     'subjects': ['Frontend Web Development', 'Custom Design', 'Dynamic Content', 'APIs', 'Asynchronous Programming', 'Final Project', 'Responsiveness', 'Accessibility'],
-    'focus': ['Organization', 'Planning', 'Design', 'Spotify API'],
+    'focus': ['Organization', 'Planning', 'Design', 'Spotify API', 'Client Credentials authorization'],
     'code_snippet': waves_snippet,
     'school_proj': true,
     'partner': {
