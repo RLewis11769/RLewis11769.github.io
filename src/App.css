@@ -41,11 +41,58 @@ ul {
   list-style: none;
 }
 
-p {
+p, h1 {
   color: var(--text-primary);
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ul.social {
+  padding: 0;
+}
+
+.social li img {
+  width: 3rem;
+  height: 3rem;
+  margin: .5rem;
+}
+
+.social li img:hover, .social li img:focus {
+  transform: scale(1.2);
+  filter: brightness(2);
+  outline: none;
+}
+
+.center {
+  text-align: center;
+}
+
+.bold {
+  font-weight: bold;
+  padding-top: 0.5rem;
+}
+
+.cols {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
+}
+
+.inside-container {
+  margin: 0 5rem;
+}
+
+@media screen and (min-width: 567px) {
+  .cols > div {
+    flex: 50%;
+    box-sizing: border-box;
+  }
 }

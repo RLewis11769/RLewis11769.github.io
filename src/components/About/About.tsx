@@ -1,5 +1,5 @@
 import { Typography } from '@material-ui/core';
-import useStyles from '../../materialUI/MaterialUI';
+import useStyles from '../Shared/MaterialUI';
 import './About.css';
 import Bio from './Bio';
 
@@ -7,8 +7,8 @@ export default function About() {
   const classes = useStyles();
 
   return (
-    <section id="bio">
-      <Typography variant="h2" component="h1" className={classes.title}>About</Typography>
+    <section>
+      <Typography variant="h1" className={classes.title}>About</Typography>
       <div className="quote_div">
         <blockquote>
           If I were given one hour to save the planet, I would spend 59 minutes defining the problem and one minute resolving it.

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { IconButton } from '@material-ui/core';
 
 const MenuButton = styled('button')<{ clicked: boolean }>`
   background-color: var(--color-primary);
@@ -9,6 +10,7 @@ const MenuButton = styled('button')<{ clicked: boolean }>`
   justify-content: center;
   align-items: center;
   position: fixed;
+  top: 5rem;
   &::before,
   &::after {
     content: "";
@@ -31,9 +33,8 @@ const MenuButton = styled('button')<{ clicked: boolean }>`
 const NavbarContainer = styled.div`
   background-color: var(--color-primary);
   width: 5rem;
-  height: 80vh;
-  margin-top: 1rem;
-  border-radius: 0 3rem;
+  height: 70vh;
+  margin-top: 3rem;
   padding: 1rem 0;
   display: flex;
   flex-direction: column;
@@ -45,16 +46,15 @@ const NavbarContainer = styled.div`
 
 const MenuItems = styled('ul')<{ clicked: boolean }>`
   color: var(--text-primary);
-  list-style: none;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: var(--color-primary);
-  padding: 2rem 0;
+  padding: 2rem 0.5rem;
   position: absolute;
-  top: 5rem;
+  top: 10rem;
   left: 0;
-  width: ${(props) => (props.clicked ? '17.5rem' : '3.5rem')};
+  width: ${(props) => (props.clicked ? '17.5rem' : '5rem')};
   transition: all 0.5s ease;
   border-radius: 0 3rem 3rem 0;
 `;
@@ -63,10 +63,14 @@ const MenuItem = styled.a`
   text-decoration: none;
   color: var(--text-secondary);
   width: 100%;
-  padding: 1rem 0;
+  padding: 1rem;
   cursor: pointer;
   display: flex;
-  padding-left: 1rem;
+  svg {
+    width: 3rem;
+    filter: invert(92%) sepia(4%) saturate(1033%) hue-rotate(169deg)
+    brightness(78%) contrast(85%);
+  }
   &:hover {
     border-right: 0.5rem solid var(--color-secondary);
     svg {
@@ -74,19 +78,51 @@ const MenuItem = styled.a`
       brightness(103%) contrast(103%);
     }
   }
-  svg {
-    width: 2.5rem;
-    height: auto;
-    filter: invert(92%) sepia(4%) saturate(1033%) hue-rotate(169deg)
-    brightness(78%) contrast(85%);
-  }
 `;
 
-const Text = styled('span')<{ clicked: boolean }>`
+const MenuText = styled('span')<{ clicked: boolean }>`
   width: ${(props) => (props.clicked ? '100%' : '0')};
   overflow: hidden;
   margin-left: ${(props) => (props.clicked ? '2.5rem' : '0')};
   transition: all 0.3s ease;
 `;
 
-export { MenuButton, NavbarContainer, MenuItems, MenuItem, Text };
+const ExpandMore = styled((props) => {
+  const { expand, ...other } = props;
+  return <IconButton {...other} />;
+})(({ expand }) => ({
+  transform: !expand ? 'rotate(0deg)' : 'rotate(180deg)',
+  marginLeft: 'auto',
+}));
+
+const H1 = styled('h1')({
+  fontSize: '2.5rem',
+  fontWeight: 'bold',
+  marginBottom: '1rem',
+  color: 'var(--color-primary)',
+});
+
+const H2 = styled('h2')({
+  fontSize: '2rem',
+  marginBottom: '1rem',
+});
+
+const Text = styled('p')({
+  fontSize: '1.5rem',
+  margin: '1rem',
+  textAlign: 'center',
+});
+
+const ButtonLink = styled('a')({
+  textDecoration: 'none',
+  color: 'var(--text-primary)',
+  '&:hover': {
+    color: 'var(--text-secondary)',
+  },
+  '&:focus': {
+    color: 'var(--text-secondary)',
+    outline: 'none',
+  },
+});
+
+export { MenuButton, NavbarContainer, MenuItems, MenuItem, MenuText, ExpandMore, H1, H2, Text, ButtonLink };

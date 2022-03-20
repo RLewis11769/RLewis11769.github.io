@@ -1,8 +1,3 @@
-#bio {
-  margin-top: 5rem;
-  margin-bottom: 5rem;
-}
-
 /* Quote */
 .quote_div {
   color: var(--text-primary);
@@ -36,9 +31,7 @@
 .stats_div {
   display: flex;
   justify-content: space-around;
-  /* align-items: flex-end; */
   flex-wrap: wrap;
-  /* margin: 3rem; */
 }
 
 .stats_div > img {
@@ -56,9 +49,4 @@
   .bio_div div:first-child {
     padding-right: 3rem;
   }
-
-  /* Stats */
-    /* .stats {
-    flex-direction: row;
-  } */
 }
