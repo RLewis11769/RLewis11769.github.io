@@ -31,17 +31,4 @@ module.exports = {
       "React": "react",
     }),
   ],
-  // externals: [
-  //   {
-  //     // String
-  //     react: 'react',
-  //   },
-  //   // Function
-  //   function ({ context, request }, callback) {
-  //     if (/node_modules$/.test(request)) {
-  //       return callback(null, 'commonjs ' + request);
-  //     }
-  //     callback();
-  //   },
-  // ],
 };
