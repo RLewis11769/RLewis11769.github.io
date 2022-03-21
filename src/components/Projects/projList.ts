@@ -1,11 +1,11 @@
-import headphones_screenshot from '../../assets/projects/headphones_screenshot.png';
-import headphones_snippet from '../../assets/projects/headphones_snippet.png';
-import smiling_school_screenshot from '../../assets/projects/smiling_school_screenshot.png';
-import smiling_school_snippet from '../../assets/projects/smiling_school_snippet.png';
-import twilight_bark_screenshot from '../../assets/projects/twilight_bark_screenshot.png';
-import twilight_bark_snippet from '../../assets/projects/twilight_bark_snippet.png';
-import waves_screenshot from '../../assets/projects/waves_screenshot.png';
-import waves_snippet from '../../assets/projects/waves_snippet.png';
+import headphones_screenshot from '../../assets/projects/headphones_screenshot.webp';
+import headphones_snippet from '../../assets/projects/headphones_snippet.jpg';
+import smiling_school_screenshot from '../../assets/projects/smiling_school_screenshot.webp';
+import smiling_school_snippet from '../../assets/projects/smiling_school_snippet.jpg';
+import twilight_bark_screenshot from '../../assets/projects/twilight_bark_screenshot.webp';
+import twilight_bark_snippet from '../../assets/projects/twilight_bark_snippet.jpg';
+import waves_screenshot from '../../assets/projects/waves_screenshot.webp';
+import waves_snippet from '../../assets/projects/waves_snippet.jpg';
 
 const projList = [
   {

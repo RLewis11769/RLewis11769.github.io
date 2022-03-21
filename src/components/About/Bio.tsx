@@ -1,4 +1,4 @@
-import ProfilePic from '../../assets/personal/ProfilePic.png';
+import ProfilePic from '../../assets/personal/ProfilePic.webp';
 
 export default function Bio() {
   return (

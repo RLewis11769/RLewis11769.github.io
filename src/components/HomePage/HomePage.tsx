@@ -1,6 +1,6 @@
 import './HomePage.css';
 import { Typography } from '@material-ui/core';
-import pic from '../../assets/personal/Banner.jpg';
+import pic from '../../assets/personal/Banner.webp';
 import useStyles from '../Shared/MaterialUI';
 
 export default function HomePage() {

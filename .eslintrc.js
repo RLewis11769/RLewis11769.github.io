@@ -17,12 +17,17 @@ module.exports = {
     },
     ecmaVersion: 'latest',
     sourceType: 'module',
-    project: './tsconfig.json',
+    project: ['./tsconfig.json'],
   },
   plugins: [
     'react',
     '@typescript-eslint',
     'import'
   ],
-  ignorePatterns: ['.eslintrc.js', 'webpack.config.js', 'reportWebVitals.ts', 'global.d.ts', 'react-app-env.d.ts', 'setupTests.ts'],
+  settings: {
+    react: {
+      version: 'detect',
+    },
+  },
+  ignorePatterns: ['.eslintrc.js', 'webpack.*.js', 'vendor.ts', '*.js'],
 };

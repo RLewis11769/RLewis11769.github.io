@@ -1,6 +1,6 @@
 import './NavBar.css';
 import { useState } from 'react';
-import { MenuButton, NavbarContainer, MenuItems, MenuItem, MenuText } from '../Shared/StyledComponents';
+import { MenuButton, NavbarContainer, MenuItems, MenuItem, MenuText, Text } from '../Shared/StyledComponents';
 import SocialLinks from '../Shared/SocialLinks';
 
 const NavBar = function NavBar() {
@@ -11,7 +11,8 @@ const NavBar = function NavBar() {
   return (
     <section className="NavBar">
       <NavbarContainer>
-      <MenuButton clicked={click} onClick={() => handleClick()} alt="Menu">Menu</MenuButton>
+        <Text>Menu</Text>
+        <MenuButton clicked={click} onClick={() => handleClick()} alt="Menu" aria-label="Menu"></MenuButton>
         <MenuItems clicked={click}>
           <li>
             <MenuItem
@@ -79,8 +80,8 @@ const NavBar = function NavBar() {
               <MenuText clicked={click}>Contact</MenuText>
             </MenuItem>
           </li>
-          <SocialLinks />
         </MenuItems>
+        <SocialLinks />
       </NavbarContainer>
     </section>
   );

@@ -10,7 +10,7 @@ const MenuButton = styled('button')<{ clicked: boolean, alt: string }>`
   justify-content: center;
   align-items: center;
   position: fixed;
-  top: 5rem;
+  top: 6.5rem;
   &::before,
   &::after {
     content: "";
@@ -27,7 +27,7 @@ const MenuButton = styled('button')<{ clicked: boolean, alt: string }>`
   &::after {
     top: ${(props) => (props.clicked ? '1.5' : '2.rem')};
     transform: ${(props) => (props.clicked ? 'rotate(-135deg)' : 'rotate(0)')};
-  }
+  },
 `;
 
 const NavbarContainer = styled.div`
@@ -77,7 +77,8 @@ const MenuItem = styled('a')<{ exact?: boolean, activeClassName: string, href: s
       filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg)
       brightness(103%) contrast(103%);
     }
-  }
+  },
+
 `;
 
 const MenuText = styled('span')<{ clicked: boolean }>`
