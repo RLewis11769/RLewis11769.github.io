@@ -1,8 +1,10 @@
+/* Homepage is entire banner when first navigate to page */
 #homepage {
   position: relative;
   height: 100vh;
 }
 
+/* Image on homepage banner */
 #homepage > img {
   height: 100%;
   width: 100%;
@@ -10,6 +12,7 @@
   object-position: 30%;
 }
 
+/* Name on homepage banner - includes media query */
 .name {
   color: var(--color-secondary);
   text-transform: uppercase;
@@ -21,15 +24,16 @@
   padding: 0 3rem;
 }
 
-#homepage p {
+/* Bree Acknowledgement */
+#homepage p:nth-child(3) {
+  color: var(--text-primary);
   text-align: right;
 }
 
 @media screen and (min-width: 900px) {
-  #homepage {
-    height: 100vh;
+  /* #homepage {
     margin: 0 auto;
-  }
+  } */
 
   .name {
     left: 80%;

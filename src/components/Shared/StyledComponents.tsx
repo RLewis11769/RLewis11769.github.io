@@ -1,16 +1,19 @@
 import styled from 'styled-components';
 import { IconButton } from '@material-ui/core';
 
+// Defining custom tags based off of html tags (can't be Material UI tags?)
+
+/*** NAVBAR ***/
 const MenuButton = styled('button')<{ clicked: boolean, alt: string }>`
   background-color: var(--color-primary);
   border: none;
-  height: 3.5rem;
+  height: 3rem;
   cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
   position: fixed;
-  top: 6.5rem;
+  top: 5rem;
   &::before,
   &::after {
     content: "";
@@ -33,8 +36,8 @@ const MenuButton = styled('button')<{ clicked: boolean, alt: string }>`
 const NavbarContainer = styled.div`
   background-color: var(--color-primary);
   width: 5rem;
-  height: 70vh;
-  margin-top: 3rem;
+  height: 75vh;
+  margin-top: 1rem;
   padding: 1rem 0;
   display: flex;
   flex-direction: column;
@@ -45,16 +48,16 @@ const NavbarContainer = styled.div`
 `;
 
 const MenuItems = styled('ul')<{ clicked: boolean }>`
-  color: var(--text-primary);
   display: flex;
   flex-direction: column;
-  align-items: center;
   background-color: var(--color-primary);
   padding: 2rem 0.5rem;
   position: absolute;
-  top: 10rem;
+  top: 8rem;
   left: 0;
-  width: ${(props) => (props.clicked ? '17.5rem' : '5rem')};
+  align-items: ${(props) => (props.clicked ? 'flex-between' : 'center')};
+  margin-left: ${(props) => (props.clicked ? '0.5rem' : '0rem')};
+  width: ${(props) => (props.clicked ? '15rem' : '5rem')};
   transition: all 0.5s ease;
   border-radius: 0 3rem 3rem 0;
 `;
@@ -63,7 +66,7 @@ const MenuItem = styled('a')<{ exact?: boolean, activeClassName: string, href: s
   text-decoration: none;
   color: var(--text-secondary);
   width: 100%;
-  padding: 1rem;
+  padding: 1rem 0;
   cursor: pointer;
   display: flex;
   svg {
@@ -78,7 +81,6 @@ const MenuItem = styled('a')<{ exact?: boolean, activeClassName: string, href: s
       brightness(103%) contrast(103%);
     }
   },
-
 `;
 
 const MenuText = styled('span')<{ clicked: boolean }>`
@@ -88,6 +90,24 @@ const MenuText = styled('span')<{ clicked: boolean }>`
   transition: all 0.3s ease;
 `;
 
+/*** BUTTONS ***/
+const ButtonLink = styled('a')({
+  textDecoration: 'none',
+  padding: '1rem',
+  '&:hover': {
+    backgroundColor: 'var(--color-secondary)',
+    color: 'var(--color-primary)',
+    borderRadius: '0.5rem',
+  },
+  '&:focus': {
+    color: 'var(--color-primary)',
+    backgroundColor: 'var(--color-secondary)',
+    borderRadius: '0.5rem',
+    outline: 'none',
+  },
+});
+
+/*** CARD ***/
 const ExpandMore = styled((props) => {
   const { expand, ...other } = props;
   return <IconButton {...other} />;
@@ -96,11 +116,11 @@ const ExpandMore = styled((props) => {
   marginLeft: 'auto',
 }));
 
+/*** OTHER ***/
 const H1 = styled('h1')({
   fontSize: '2.5rem',
   fontWeight: 'bold',
   marginBottom: '1rem',
-  color: 'var(--color-primary)',
 });
 
 const H2 = styled('h2')({
@@ -112,19 +132,6 @@ const Text = styled('p')({
   fontSize: '1.5rem',
   margin: '1rem',
   textAlign: 'center',
-});
-
-const ButtonLink = styled('a')({
-  textDecoration: 'none',
-  padding: '1rem',
-  color: 'var(--text-primary)',
-  '&:hover': {
-    color: 'var(--text-secondary)',
-  },
-  '&:focus': {
-    color: 'var(--text-secondary)',
-    outline: 'none',
-  },
 });
 
 export { MenuButton, NavbarContainer, MenuItems, MenuItem, MenuText, ExpandMore, H1, H2, Text, ButtonLink };

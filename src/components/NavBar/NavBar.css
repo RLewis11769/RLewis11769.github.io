@@ -1,20 +1,24 @@
+/* NavBar stays in one place overlaying other content */
 .NavBar {
   position: absolute;
   z-index: 1;
 }
 
+/* Only place referencing span is words in navbar button clicked */
 span {
   font-size: 1.5rem;
   font-weight: bold;
+  color: var(--text-primary);
 }
 
-.NavBar .social {
+/* Social icons */
+.NavBar .center {
   flex-direction: column;
   position: absolute;
   top: 35rem;
   left: -3.5rem;
 }
 
-.NavBar ul.social {
+.NavBar ul.center {
   padding: 4rem 0 0 4rem;
 }

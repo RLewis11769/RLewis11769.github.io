@@ -3,6 +3,9 @@ import useStyles from '../Shared/MaterialUI';
 import PDF from './PDF';
 
 export default function Resume() {
+  // Rendering of resume section - includes PDF component
+
+  // Make use of Material UI's styling classes
   const classes = useStyles();
 
   return (

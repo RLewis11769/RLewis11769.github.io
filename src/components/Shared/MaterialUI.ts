@@ -1,11 +1,15 @@
 import { makeStyles } from '@material-ui/core/styles';
 
+// Define styles for Material UI components
+// This is probably not the way to use these, but I didn't know
 const useStyles = makeStyles({
+  // Name used on homepage banner for my name
   name: {
     color: 'var(--color-secondary)',
     fontWeight: 'bold',
     fontSize: '7.5rem',
   },
+  // Title is for title at beginning of each section
   title: {
     color: 'var(--color-secondary)',
     fontWeight: 'bold',
@@ -13,15 +17,16 @@ const useStyles = makeStyles({
     marginBottom: '5rem',
     marginTop: '5rem',
   },
+  // Card is used in projects section and contact section
   card: {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: '#161B22',
-    borderRadius: '2rem',
+    borderRadius: '3rem',
     margin: '0.5rem',
   },
+  // Used in projects section
   cardHeader: {
     backgroundColor: 'var(--color-secondary)',
     width: '100%',
@@ -31,24 +36,10 @@ const useStyles = makeStyles({
     padding: '1rem',
   },
   customButton: {
-    backgroundColor: 'transparent',
-    color: 'var(--color-secondary)',
     textShadow: '0px 0px 3px #26A641',
     boxShadow: '0px 0px 3px #26A641',
     border: '2px solid #26A641',
-    textDecoration: 'none',
-    borderRadius: '0.3rem',
     cursor: 'pointer',
-    margin: '1rem',
-    '&:hover': {
-      backgroundColor: 'var(--color-secondary)',
-      color: 'var(--color-primary)',
-    },
-    '&:focus': {
-      outline: 'none',
-      backgroundColor: 'var(--color-secondary)',
-      color: 'var(--color-primary)',
-    },
   },
 });
 

@@ -30,7 +30,7 @@ module.exports = merge(shared, {
               loader: 'url-loader',
               options: {
                   limit: 10000,
-                  name: '[name].[ext]'
+                  name: '[name].[contenthash].[ext]'
               }
           },
           {
@@ -87,8 +87,5 @@ module.exports = merge(shared, {
         }
       }
     }
-  },
-  stats: {
-    children: true,
   }
 });

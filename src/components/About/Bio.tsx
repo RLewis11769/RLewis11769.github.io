@@ -1,6 +1,8 @@
 import ProfilePic from '../../assets/personal/ProfilePic.webp';
 
 export default function Bio() {
+  // Rendering of bio text in about section
+
   return (
     <div className="bio_div container">
       <div>

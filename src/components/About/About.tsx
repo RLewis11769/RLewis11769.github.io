@@ -4,6 +4,9 @@ import './About.css';
 import Bio from './Bio';
 
 export default function About() {
+  // Rendering of about section
+
+  // Make use of Material UI's styling classes - includes "Bio" component
   const classes = useStyles();
 
   return (

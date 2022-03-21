@@ -7,6 +7,7 @@ import twilight_bark_snippet from '../../assets/projects/twilight_bark_snippet.j
 import waves_screenshot from '../../assets/projects/waves_screenshot.webp';
 import waves_snippet from '../../assets/projects/waves_snippet.jpg';
 
+// Temp way to store data (hopefully db soon)
 const projList = [
   {
     'name': 'Holberton Headphones',

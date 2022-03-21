@@ -30,7 +30,7 @@
 /* Stats */
 .stats_div {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
@@ -38,7 +38,7 @@
   padding: 1.5rem;
 }
 
-/* Media queries */
+/* Media queries start at full size */
 @media screen and (min-width: 767px) {
   /* Bio */
   .bio_div {

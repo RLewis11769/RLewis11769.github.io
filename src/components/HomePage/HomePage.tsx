@@ -1,9 +1,12 @@
-import './HomePage.css';
 import { Typography } from '@material-ui/core';
-import pic from '../../assets/personal/Banner.webp';
 import useStyles from '../Shared/MaterialUI';
+import './HomePage.css';
+import pic from '../../assets/personal/Banner.webp';
 
 export default function HomePage() {
+  // Rendering of banner at top of page loaded first
+
+  // Make use of Material UI's styling classes
   const classes = useStyles();
 
   return (
