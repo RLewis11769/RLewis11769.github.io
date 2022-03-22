@@ -41,6 +41,12 @@ const useStyles = makeStyles({
     border: '2px solid #26A641',
     cursor: 'pointer',
   },
+  // Override Material UI's inbuilt styles
+  root: {
+    '& .MuiPaper-root': {
+      backgroundColor: 'var(--color-primary)',
+    },
+  },
 });
 
 export default useStyles;

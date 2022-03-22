@@ -12,19 +12,18 @@ module.exports = merge(shared, {
   output: {
     path: path.resolve(__dirname, 'build'),
     filename: '[name].[contentHash].bundle.js',
-    // assetModuleFilename: '[name][ext]',
   },
   module: {
     rules: [
       {
         test: /\.css$/,
         use: [
-          MiniCssExtractPlugin.loader, //3. Extract css into files
-          'css-loader', //2. Turns css into commonjs
+          MiniCssExtractPlugin.loader, // Extract css into files
+          'css-loader', // Turn css into commonjs
         ]
       },
       {
-        test: /\.(jpe?g|png|gif|svg|pdf|ico|webp)$/i,
+        test: /\.(jpe?g|png|gif|svg|pdf|webp)$/i,
         use: [
           {
               loader: 'url-loader',
@@ -40,6 +39,10 @@ module.exports = merge(shared, {
               }
            }
         ]
+      },
+      {
+        test: /\.(ico)$/i,
+        type: 'asset/resource',
       },
     ]
   },

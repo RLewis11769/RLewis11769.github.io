@@ -18,7 +18,7 @@ const Project = function Project({ name, dates, pic, short_desc, long_desc, link
 
   return (
     // This is all disgusting - please refactor later
-    <div>
+    <div className={classes.root}>
       <Card className={classes.card}>
         <div className={classes.cardHeader}>
           <H1>{name}</H1>
